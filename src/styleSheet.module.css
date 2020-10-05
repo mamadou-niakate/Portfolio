@@ -1,0 +1,52 @@
+.demo {  background-color: '#ffffff'; }
+
+.title {
+    margin-left: 10px;
+    padding-top: 20px;
+}
+
+.buttons { 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.rating { margin-top: 13 }
+.paper {
+    background-color: #ffffff;
+    width: 410px;
+    height: 450px;
+    margin: auto;
+    margin-top: 8%;
+    border-radius: 8px;
+}
+
+.paperBis {
+    background-color: #ffffff;
+    width: 410px;
+    height: 500px;
+    margin: auto;
+    margin-top: 8%;
+    border-radius: 8px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.groupForm {
+    padding-top: 20px;
+}
+
+.dateText {
+    color: #969494;
+    margin-top: 2px;   
+    margin-bottom: 1px;   
+}
+
+.dateLabel {
+    color: #969494;
+    width: 95%;
+}
