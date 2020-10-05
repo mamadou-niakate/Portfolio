@@ -1,4 +1,4 @@
-import React, {useState, Fragment} from 'react';
+import React, {useState} from 'react';
 import ExperiencesList from '../../components/front/Experiences/ExperiencesList';
 
 function Experience (props) {

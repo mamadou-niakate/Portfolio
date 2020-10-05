@@ -4,7 +4,6 @@ import SingleProject from './SingleProject';
 import { makeStyles } from '@material-ui/core/styles';
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
-import Header from "../../../contents/Header/Header";
 
 const useStyles = makeStyles((theme) => ({
     nav: {

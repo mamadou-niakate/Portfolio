@@ -1,4 +1,3 @@
-import { Paper } from '@material-ui/core';
 import React, {useState} from 'react';
 import SKillsList from '../../components/front/Skills/SkillsList';
 
