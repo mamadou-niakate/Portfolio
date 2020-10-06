@@ -12,7 +12,6 @@ import ScrollToTop from "react-scroll-to-top";
 import { useTranslation } from 'react-i18next';
 import {Translation} from "react-i18next";
 
-
 const heading = {
   backgroundColor: '#1d1f26',
   color:'white',
@@ -65,10 +64,7 @@ function App({ classes, t }) {
                   <AppBar position="static" color="transparent">
                       <Toolbar>
                           <Grid container justify="space-between"  alignItems="center">
-                              <Grid container item lg={4} alignItems="center" justify="space-around">
-                                  <Grid item>
-                                      <img src="/images/logo.png"  alt="logo" style={{width:"60px", height:"40"}}/>
-                                  </Grid>
+                              <Grid container item lg={2} alignItems="center" justify="space-around">
                                   <Grid item>
                                       <a href="https://github.com/mamadou-niakate" target="_blank">
                                           <img src="https://www.flaticon.com/svg/static/icons/svg/733/733553.svg"  alt="logo" style={{width:"40px", height:"auto"}}/>
@@ -85,13 +81,13 @@ function App({ classes, t }) {
                                       </a>
                                   </Grid>
                                   <Grid item>
-                                      <Fab onClick={() => changeLanguage('fr')} style={{width:"40px", height:"auto"}}>
-                                          <img src={"https://www.flaticon.com/svg/static/icons/svg/197/197560.svg"} alt={"fr_flag"} style={{width:"40px", height:"auto"}}/>
+                                      <Fab onClick={() => changeLanguage('fr')} style={{width:40, height:40}}>
+                                            FR
                                       </Fab>
                                   </Grid>
                                   <Grid item>
-                                      <Fab onClick={() => changeLanguage('en')} style={{width:"40px", height:"auto"}}>
-                                          <img src={"https://www.flaticon.com/svg/static/icons/svg/197/197374.svg"} alt={"en_flag"} style={{width:"40px", height:"auto"}}/>
+                                      <Fab onClick={() => changeLanguage('en')} style={{width:40, height:40}}>
+                                            EN
                                       </Fab>
                                   </Grid>
                               </Grid>
