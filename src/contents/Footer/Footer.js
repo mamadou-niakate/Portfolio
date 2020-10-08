@@ -45,7 +45,6 @@ function Project (props) {
                 </Grid>
             </Grid>
         </Paper>
-
     )
 }
 export default Project;

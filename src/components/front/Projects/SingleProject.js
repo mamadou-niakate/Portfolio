@@ -88,7 +88,7 @@ function SingleProject(props) {
                     })}
                     onClick={handleExpandClick} aria-expanded={expanded} aria-label="show more"
                 >
-                    <ExpandMoreIcon />
+                    <ExpandMoreIcon style={{color: "#fff"}} />
                 </IconButton>
                 <Collapse in={expanded} timeout="auto" unmountOnExit>
                     <CardContent>

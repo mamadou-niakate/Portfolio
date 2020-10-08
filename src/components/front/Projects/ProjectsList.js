@@ -1,22 +1,23 @@
 import React, { useState, useEffect } from "react";
-import {Grid, Paper, Typography} from "@material-ui/core";
+import {Button, Grid, Paper, Typography} from "@material-ui/core";
 import SingleProject from './SingleProject';
 import { makeStyles } from '@material-ui/core/styles';
-import BottomNavigation from '@material-ui/core/BottomNavigation';
-import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
+import {grey} from "@material-ui/core/colors";
 
 const useStyles = makeStyles((theme) => ({
     nav: {
-        paddingTop: 50,
-        paddingLeft: 100,
-        paddingRight: 100,
-        paddingBottom: 50,
-        backgroundColor: '#090a0d',
+        marginTop: 50,
+        marginBottom: 50,
+        marginLeft: "10em",
+        backgroundColor: '#1D1F26',
     },
     navLinks: {
-        backgroundColor: '#1D1F26',//003545
-        color: 'white',
         fontWeight: 'bold',
+        color: 'teal',
+        '&:hover': {
+            color: '#8e8f93',
+            borderBottom: '2px dashed teal'
+        }
     },
     table: {
         height:700
@@ -36,13 +37,13 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: '#3a4750',
     },
     gridStyle: {
-        marginTop: 40,
+        marginTop: 10,
         marginBottom: 40,
     },
     title: {
         backgroundColor: '#090a0d',
         color:'#8e8f93',
-        paddingTop:40,
+        paddingTop:10,
         paddingBottom: 30,
         textAlign: 'center',
     },
@@ -57,14 +58,20 @@ const useStyles = makeStyles((theme) => ({
         height: 'auto'
     },
     deskTopSize: {
-        /*[theme.breakpoints.up('md')]:{
-            height: '82em'
-        }*/
+        [theme.breakpoints.up('md')]:{
+            marginLeft: 200,
+            marginRight: 200,
+            marginTop: 20,
+            marginBottom: 40
+        }
     },
     mobileSize: {
-        /*[theme.breakpoints.down('sm')]:{
-            height: '182em'
-        }*/
+        [theme.breakpoints.down('sm')]:{
+            marginLeft: 20,
+            marginRight: 20,
+            marginTop: 20,
+            marginBottom: 40,
+        }
     }
 }));
 
@@ -101,12 +108,8 @@ function Project(props) {
         return techs.indexOf(tech) === index
     })
 
-    const changeNavValue = (event, newValue) => {
-        setValue(newValue);
-    }
-
     return (
-        <Paper elevation={4} className={`${classes.containerBG} ${classes.deskTopSize} ${classes.mobileSize}`}>
+        <Paper elevation={4} className={`${classes.containerBG}`}>
             <Grid container direction="column" className={classes.title}>
                 <Grid item>
                     <Typography variant="h2" component="h2">
@@ -119,15 +122,19 @@ function Project(props) {
                     </Typography>
                 </Grid>
             </Grid>
-            <BottomNavigation value={value} onChange={changeNavValue} showLabels className={classes.nav}>
-                {
-                    technologies.map(techno =>
-                        <BottomNavigationAction className={classes.navLinks}
-                                                onClick={() => setFilter(`${techno}`)}
-                                                label={<Typography variant="h6" style={{color: 'teal'}}> {techno} </Typography>}  />
-                    )
-                }
-            </BottomNavigation>
+            <Paper elevation={3} className={`${classes.nav} ${classes.deskTopSize} ${classes.mobileSize}`}>
+                <Grid container justify="space-evenly">
+                    {
+                        technologies.map(techno =>
+                            <Grid item style={{padding: 10}}>
+                                <Button className={classes.navLinks} onClick={() => setFilter(`${techno}`)}>
+                                    <Typography variant="h6"> {techno} </Typography>
+                                </Button>
+                            </Grid>
+                        )
+                    }
+                </Grid>
+            </Paper>
             <Grid container direction="row" justify="center" alignItems="center" className={classes.containerBG}>
                 <Grid container item justify="space-evenly" alignItems="center" lg={8}>
                     {

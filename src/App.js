@@ -2,7 +2,7 @@ import { Switch, BrowserRouter, Route, Link } from 'react-router-dom';
 import React from 'react';
 import BackOffice from './components/back/BackOffice';
 import Dashboard from './contents/Home/Dashboard';
-import {Fab, Grid, Typography} from '@material-ui/core';
+import {Button, Fab, Grid, Typography} from '@material-ui/core';
 import { withStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -48,6 +48,9 @@ const styles = theme => ({
     root: {
         backgroundColor: '#090A0D',
     },
+    img: {
+        width:40, height:'auto'
+    }
 });
 
 function App({ classes, t }) {
@@ -64,31 +67,32 @@ function App({ classes, t }) {
                   <AppBar position="static" color="transparent">
                       <Toolbar>
                           <Grid container justify="space-between"  alignItems="center">
-                              <Grid container item lg={2} alignItems="center" justify="space-around">
+                              <Grid container item lg={4} alignItems="center" justify="space-around">
                                   <Grid item>
                                       <a href="https://github.com/mamadou-niakate" target="_blank">
-                                          <img src="https://www.flaticon.com/svg/static/icons/svg/733/733553.svg"  alt="logo" style={{width:"40px", height:"auto"}}/>
+                                          <img src="https://img.icons8.com/color/2x/github.png"  alt="logo" className={classes.img}/>
                                       </a>
                                   </Grid>
                                   <Grid item>
                                       <a href="https://www.linkedin.com/in/mamadou-niakate/" target="_blank">
-                                          <img src="https://www.flaticon.com/svg/static/icons/svg/174/174857.svg"  alt="logo" style={{width:"40px", height:"auto"}}/>
+                                          <img src="https://img.icons8.com/color/72/linkedin-circled.png"  alt="logo" className={classes.img}/>
                                       </a>
                                   </Grid>
                                   <Grid item>
                                       <a href="mailto:mamadouniakate10@yahoo.fr" target="_blank">
-                                          <img src="https://www.flaticon.com/svg/static/icons/svg/552/552486.svg"  alt="logo" style={{width:"40px", height:"auto"}}/>
+                                          <img src="https://img.icons8.com/fluent/2x/filled-sent.png"  alt="logo" className={classes.img}/>
                                       </a>
                                   </Grid>
+                                  |
                                   <Grid item>
-                                      <Fab onClick={() => changeLanguage('fr')} style={{width:40, height:40}}>
-                                            FR
-                                      </Fab>
+                                      <Button onClick={() => changeLanguage('fr')}>
+                                            <img src={"https://img.icons8.com/color/2x/france-circular.png"} className={classes.img}/>
+                                      </Button>
                                   </Grid>
                                   <Grid item>
-                                      <Fab onClick={() => changeLanguage('en')} style={{width:40, height:40}}>
-                                            EN
-                                      </Fab>
+                                      <Button onClick={() => changeLanguage('en')}>
+                                            <img src={"https://img.icons8.com/color/2x/great-britain-circular.png"} className={classes.img}/>
+                                      </Button>
                                   </Grid>
                               </Grid>
                               <Grid container item lg={4} style={{width: 360}} justify="space-around">
