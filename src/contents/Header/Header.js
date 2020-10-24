@@ -28,7 +28,7 @@ const styles = theme => ({
     desktopSize: {
         [theme.breakpoints.up("md")]: {
             width:"350px",
-            height:"300px",
+            height:"auto",
         }
     },
     mobileSize: {
@@ -84,7 +84,7 @@ function Header(props) {
                         </Grid>
                     </Grid>
                     <Grid item lg={4}>
-                        <img className={`${classes.desktopSize} ${classes.mobileSize}`} src={"https://www.learneasycode.com/wp-content/uploads/2020/03/coding-isometric-01.png"} alt="Logo" />
+                        <img className={`${classes.desktopSize} ${classes.mobileSize}`} src={"/images/header4.png"} alt="Logo" />
                     </Grid>
                 </Grid>
                 <Grid container item justify="center">
