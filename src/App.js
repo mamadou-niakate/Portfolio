@@ -50,7 +50,7 @@ const styles = theme => ({
     },
     img: {
         width:40, height:'auto'
-    }
+    },
 });
 
 function App({ classes, t }) {
@@ -67,7 +67,7 @@ function App({ classes, t }) {
                   <AppBar position="static" color="transparent">
                       <Toolbar>
                           <Grid container justify="space-between"  alignItems="center">
-                              <Grid container item lg={4} alignItems="center" justify="space-around">
+                              <Grid container item lg={4} sm={5} alignItems="center" justify="space-around">
                                   <Grid item>
                                       <a href="https://github.com/mamadou-niakate" target="_blank">
                                           <img src="https://img.icons8.com/color/2x/github.png"  alt="logo" className={classes.img}/>
@@ -95,7 +95,7 @@ function App({ classes, t }) {
                                       </Button>
                                   </Grid>
                               </Grid>
-                              <Grid container item lg={4} style={{width: 360}} justify="space-around">
+                              <Grid container item lg={2} sm={3} justify="space-around">
                                   <Grid item>
                                       <Typography variant="h6" noWrap >
                                           <Link to="/" className={classes.navLink}>
@@ -118,16 +118,6 @@ function App({ classes, t }) {
                                           </Link>
                                       </Typography>
                                   </Grid>
-                                  <Grid item>
-                                      <Typography variant="h6" noWrap>
-                                          <Translation>
-                                              {
-                                                  t => <>{t('A Propos')}</>
-                                              }
-                                          </Translation>
-                                      </Typography>
-                                  </Grid>
-                                  <Grid item> <Typography variant="h6" noWrap> Contact </Typography> </Grid>
                               </Grid>
                           </Grid>
                       </Toolbar>
