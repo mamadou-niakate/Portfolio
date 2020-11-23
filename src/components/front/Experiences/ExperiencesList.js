@@ -33,7 +33,7 @@ function ExperiencesList(props) {
             {
                 data.map(experience => {
                     return (
-                        <TimelineItem>
+                        <TimelineItem key={experience.key}>
                             <TimelineOppositeContent>
                                 <Typography variant="h6" color="textSecondary">
                                     <span className={classes.textColor}>{experience.startingDate} - {experience.endingDate}</span>

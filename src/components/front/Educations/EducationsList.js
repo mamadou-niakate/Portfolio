@@ -63,7 +63,7 @@ function EducationsList (props) {
             <Stepper activeStep={activeStep} orientation="vertical" style={background}>
                 {
                     data.map(education => (
-                        <Step key={education}>
+                        <Step key={education.key}>
                             <StepLabel>
                                 <Typography className={classes.lightColor} variant="h5">
                                     <Translation>

@@ -73,13 +73,13 @@ function SingleProject(props) {
             </CardContent>
             <CardActions disableSpacing>
                 <IconButton aria-label="share">
-                    <a href={project.links.details.link} target="_blank">
-                        <img src={project.links.repository.image} className={classes.imageStyle}/>
+                    <a href={project.links.details.link} target="_blank" rel="noopener noreferrer">
+                        <img src={project.links.repository.image} className={classes.imageStyle} alt="project repo icon"/>
                     </a>
                 </IconButton>
                 <IconButton aria-label="add to favorites">
-                    <a href={project.links.details.link} target="_blank">
-                        <img src={project.links.details.image} className={classes.imageStyle}/>
+                    <a href={project.links.details.link} target="_blank" rel="noopener noreferrer">
+                        <img src={project.links.details.image} className={classes.imageStyle} alt="project detail icon"/>
                     </a>
                 </IconButton>
                 <IconButton
@@ -94,7 +94,7 @@ function SingleProject(props) {
                     <CardContent>
                         <Typography paragraph>Technologies utilisées</Typography>
                         {
-                            project.toolsImage.map(image => <img src={image} style={{width: 30, paddingLeft: 10}}/>)
+                            project.toolsImage.map(image => <img  key={image} src={image} style={{width: 30, paddingLeft: 10}} alt="project tools"/>)
                         }
                     </CardContent>
                 </Collapse>

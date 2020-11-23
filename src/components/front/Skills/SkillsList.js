@@ -9,7 +9,7 @@ function SKillsList (props) {
             {
                 data.map(skill => {
                     return (
-                        <ListItem>
+                        <ListItem key={skill.key}>
                             <SingleSkill skill={skill}/>
                         </ListItem>
                     )

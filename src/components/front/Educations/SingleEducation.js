@@ -32,7 +32,7 @@ function SingleEducation(props) {
     return (
         <Grid container alignItems="center">
           <Grid item lg={4}>
-              <img src={`${education.image}`} className={`${classes.desktopImage} ${classes.mobileImage}`}/>
+              <img src={`${education.image}`} className={`${classes.desktopImage} ${classes.mobileImage}`} alt="school-img"/>
           </Grid>
           <Grid item container direction="row" lg={8}>
                 <Grid item container direction="column"lg={8}>

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import {Button, Grid, Paper, Typography} from "@material-ui/core";
 import SingleProject from './SingleProject';
 import { makeStyles } from '@material-ui/core/styles';
-import {grey} from "@material-ui/core/colors";
 
 const useStyles = makeStyles((theme) => ({
     nav: {
@@ -80,7 +79,6 @@ function Project(props) {
     const classes = useStyles();
     const [filter, setFilter] = useState("Tous");
     const [projects, setProjects] = useState([]);
-    const [value, setValue] = React.useState(0);
     const {data} = props;
 
     useEffect(() => {
@@ -117,7 +115,7 @@ function Project(props) {
                     </Typography>
                 </Grid>
                 <Grid item>
-                    <Typography variant="4" component='h4'>
+                    <Typography variant="h4" component='h4'>
                         Les projets auxquels j'ai participés
                     </Typography>
                 </Grid>
@@ -126,7 +124,7 @@ function Project(props) {
                 <Grid container justify="space-evenly">
                     {
                         technologies.map(techno =>
-                            <Grid item style={{padding: 10}}>
+                            <Grid key={techno} item style={{padding: 10}}>
                                 <Button className={classes.navLinks} onClick={() => setFilter(`${techno}`)}>
                                     <Typography variant="h6"> {techno} </Typography>
                                 </Button>
@@ -139,7 +137,7 @@ function Project(props) {
                 <Grid container item justify="space-evenly" alignItems="center" lg={8}>
                     {
                         projects.map(project =>
-                            project.filtered === true ? <Grid key={project.outils} className={classes.gridStyle}> <SingleProject project={project}/> </Grid> : ""
+                            project.filtered === true ? <Grid key={project.name} className={classes.gridStyle}> <SingleProject project={project}/> </Grid> : ""
                         )
                     }
                 </Grid>

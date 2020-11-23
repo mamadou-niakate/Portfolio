@@ -54,7 +54,7 @@ function Header(props) {
         <Typography component="div" style={overlay}>
             <Grid container direction="column" justify="space-around" alignItems="center">
                 <Grid container item direction="row" justify="space-around" alignItems="center" style={info}>
-                    <Grid item direction="column" lg={4} spacing={1}>
+                    <Grid item container direction="column" lg={4} spacing={1}>
                         <Grid item>
                             <Typography component="em" variant="h6">
                                 <Translation>

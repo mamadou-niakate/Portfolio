@@ -38,10 +38,10 @@ function Project (props) {
                 </Grid>
                 <Divider />
                 <Grid item container direction="row" justify="center" alignItems="center" className={classes.gridcontainers} >
-                    <Grid item><img src="https://img.icons8.com/material-outlined/72/linkedin.png" className={classes.image}/></Grid>
-                    <Grid item><img src="https://img.icons8.com/material-outlined/72/github.png" className={classes.image}/></Grid>
-                    <Grid item><img src="https://img.icons8.com/material-outlined/72/facebook-circled.png" className={classes.image}/></Grid>
-                    <Grid item><img src="https://img.icons8.com/material-outlined/72/twitter-squared.png" className={classes.image}/></Grid>
+                    <Grid item><img src="https://img.icons8.com/material-outlined/72/linkedin.png" className={classes.image} alt="linkedin-icon" /></Grid>
+                    <Grid item><img src="https://img.icons8.com/material-outlined/72/github.png" className={classes.image} alt="github-icon"/></Grid>
+                    <Grid item><img src="https://img.icons8.com/material-outlined/72/facebook-circled.png" className={classes.image} alt="facebook-icon"/></Grid>
+                    <Grid item><img src="https://img.icons8.com/material-outlined/72/twitter-squared.png" className={classes.image} alt="twitter-icon"/></Grid>
                 </Grid>
             </Grid>
         </Paper>

@@ -2,7 +2,7 @@ import { Switch, BrowserRouter, Route, Link } from 'react-router-dom';
 import React from 'react';
 import BackOffice from './components/back/BackOffice';
 import Dashboard from './contents/Home/Dashboard';
-import {Button, Fab, Grid, Typography} from '@material-ui/core';
+import {Button, Grid, Typography} from '@material-ui/core';
 import { withStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -69,29 +69,29 @@ function App({ classes, t }) {
                           <Grid container justify="space-between"  alignItems="center">
                               <Grid container item lg={4} sm={5} alignItems="center" justify="space-around">
                                   <Grid item>
-                                      <a href="https://github.com/mamadou-niakate" target="_blank">
+                                      <a href="https://github.com/mamadou-niakate" target="_blank" rel="noopener noreferrer" >
                                           <img src="https://img.icons8.com/color/2x/github.png"  alt="logo" className={classes.img}/>
                                       </a>
                                   </Grid>
                                   <Grid item>
-                                      <a href="https://www.linkedin.com/in/mamadou-niakate/" target="_blank">
+                                      <a href="https://www.linkedin.com/in/mamadou-niakate/" target="_blank" rel="noopener noreferrer" >
                                           <img src="https://img.icons8.com/color/72/linkedin-circled.png"  alt="logo" className={classes.img}/>
                                       </a>
                                   </Grid>
                                   <Grid item>
-                                      <a href="mailto:mamadouniakate10@yahoo.fr" target="_blank">
+                                      <a href="mailto:mamadouniakate10@yahoo.fr" target="_blank" rel="noopener noreferrer" >
                                           <img src="https://img.icons8.com/fluent/2x/filled-sent.png"  alt="logo" className={classes.img}/>
                                       </a>
                                   </Grid>
                                   |
                                   <Grid item>
                                       <Button onClick={() => changeLanguage('fr')}>
-                                            <img src={"https://img.icons8.com/color/2x/france-circular.png"} className={classes.img}/>
+                                            <img src={"https://img.icons8.com/color/2x/france-circular.png"} alt="france-flag" className={classes.img}/>
                                       </Button>
                                   </Grid>
                                   <Grid item>
                                       <Button onClick={() => changeLanguage('en')}>
-                                            <img src={"https://img.icons8.com/color/2x/great-britain-circular.png"} className={classes.img}/>
+                                            <img src={"https://img.icons8.com/color/2x/great-britain-circular.png"} alt="england-flag" className={classes.img}/>
                                       </Button>
                                   </Grid>
                               </Grid>

@@ -1,5 +1,4 @@
 import React, { Component, Fragment } from 'react';
-import ListItem from '@material-ui/core/ListItem';
 import { Grid, Typography } from '@material-ui/core';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 import {Translation} from "react-i18next";
@@ -21,8 +20,7 @@ class SingleExperience extends Component {
 
     return (
       <Fragment>
-        <ListItem style={background}>
-        <Grid container alignItems="center">
+        <Grid container alignItems="center" style={background}>
           <Grid item container justify="space-between">
                 <Grid item>
                   <Typography style={marginBottom}> 
@@ -61,7 +59,6 @@ class SingleExperience extends Component {
                   </Grid>
           </Grid>
         </Grid>
-        </ListItem>
       </Fragment>
     );
   }

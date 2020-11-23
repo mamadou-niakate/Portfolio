@@ -41,7 +41,7 @@ const ProgressBar = (props) => {
     <Fragment>
       <Grid container alignItems="center">
         <Grid item lg={1}>
-          <p style={{color:'white', marginTop: -10}}> <img src={`${skill.image}`} style={{width: 50, height: 50}}/> </p>
+          <p style={{color:'white', marginTop: -10}}> <img src={`${skill.image}`} style={{width: 50, height: 50}} alt="skill-logo"/> </p>
         </Grid>
         <Grid item lg={11}>
           <div style={containerStyles}>
