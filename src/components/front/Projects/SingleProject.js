@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
             borderRadius: 10,
             boxShadow: 'inset 0 0 1em white, 0 0 2em #3d3d3d'
         },
-        background: '#1D1F26',
+        background: '#F1F5F8',
         color: '#fff'
     },
     media: {

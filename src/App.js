@@ -17,13 +17,6 @@ const heading = {
   color:'white',
 }
 
-const overlay = {
-    backgroundColor: '#363333',
-    height: '100%',
-    width: '100%',
-    opacity: '0.5',
-}
-
 const styles = theme => ({
     desktopSize: {
         [theme.breakpoints.up("md")]: {
@@ -63,8 +56,8 @@ function App({ classes, t }) {
     <div className={classes.root}>
       <BrowserRouter>
           <nav style={heading}>
-              <Typography component="div" style={overlay}>
-                  <AppBar position="static" color="transparent">
+              <Typography component="div">
+                  <AppBar position="fixed" color="transparent" style={{zIndex:1}}>
                       <Toolbar>
                           <Grid container justify="space-between"  alignItems="center">
                               <Grid container item lg={4} sm={5} alignItems="center" justify="space-around">

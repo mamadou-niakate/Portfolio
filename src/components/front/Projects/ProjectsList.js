@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme) => ({
         marginTop: 50,
         marginBottom: 50,
         marginLeft: "10em",
-        backgroundColor: '#1D1F26',
+        backgroundColor: '#F1F5F8',//#1D1F26
     },
     navLinks: {
         fontWeight: 'bold',
@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
         color: '#ffffff'
     },
     containerBG: {
-        backgroundColor: '#090a0d',
+        backgroundColor: '#F1F5F8',
         minHeight: "50em"
     },
     paperBG: {
@@ -40,17 +40,11 @@ const useStyles = makeStyles((theme) => ({
         marginBottom: 40,
     },
     title: {
-        backgroundColor: '#090a0d',
+        backgroundColor: '#F1F5F8',
         color:'#8e8f93',
         paddingTop:10,
         paddingBottom: 30,
         textAlign: 'center',
-    },
-    paper: {
-        display: 'flex',
-        flexWrap: 'wrap',
-        width: 300,
-        background: '#1a202c'
     },
     image: {
         width: 30,
@@ -87,10 +81,7 @@ function Project(props) {
 
     useEffect(() => {
         setProjects([]);
-        const filtered = data.map(p => ({
-            ...p,
-            filtered: p.outils.includes(filter)
-        }));
+        const filtered = data.map(p => ({...p,filtered: p.outils.includes(filter)}));
         setProjects(filtered);
     }, [filter]);
 
@@ -108,18 +99,10 @@ function Project(props) {
 
     return (
         <Paper elevation={4} className={`${classes.containerBG}`}>
-            <Grid container direction="column" className={classes.title}>
-                <Grid item>
-                    <Typography variant="h2" component="h2">
-                        Projets
-                    </Typography>
-                </Grid>
-                <Grid item>
-                    <Typography variant="h4" component='h4'>
-                        Les projets auxquels j'ai participés
-                    </Typography>
-                </Grid>
-            </Grid>
+            <div className={classes.title}>
+                <Typography variant="h2"> Projets </Typography>
+                <Typography variant="h4"> Les projets auxquels j'ai participés </Typography>
+            </div>
             <Paper elevation={3} className={`${classes.nav} ${classes.deskTopSize} ${classes.mobileSize}`}>
                 <Grid container justify="space-evenly">
                     {
@@ -133,7 +116,7 @@ function Project(props) {
                     }
                 </Grid>
             </Paper>
-            <Grid container direction="row" justify="center" alignItems="center" className={classes.containerBG}>
+            <Grid container direction="row" justify="center" alignItems="flex-start" className={classes.containerBG}>
                 <Grid container item justify="space-evenly" alignItems="center" lg={8}>
                     {
                         projects.map(project =>

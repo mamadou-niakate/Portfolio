@@ -1,66 +1,24 @@
-import React, { Component, Fragment } from 'react';
-import { Grid, Typography } from '@material-ui/core';
+import React, { Component } from 'react';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
-import {Translation} from "react-i18next";
+import DoubleArrowIcon from '@material-ui/icons/DoubleArrow';
 
-const background = {
-  backgroundColor: '#003545',
-  color: '#ffffff',
-  marginTop: '20px', 
-  borderRadius: '20px'
-}
-
-const marginBottom = {
-  marginBottom: '20px'
-}
-
-class SingleExperience extends Component {
-  render() {
-    const {experience} = this.props;
-
+function SingleExperience({status,area,company,job,startingDate,endingDate,description,logo,key,}) {
     return (
-      <Fragment>
-        <Grid container alignItems="center" style={background}>
-          <Grid item container justify="space-between">
-                <Grid item>
-                  <Typography style={marginBottom}> 
-                    <Translation>
-                        {
-                            t => <> {t(`${experience.status}`)}</>
-                        }
-                    </Translation>
-                  </Typography>
-                </Grid>
-                <Grid item>
-                  <Typography component="em" style={marginBottom}> 
-                    {experience.startingDate} - {experience.endingDate}
-                  </Typography> 
-                </Grid>
-          </Grid>
-          <Grid item container justify="space-between">
-            <Grid item>
-              <Typography style={marginBottom}>
-                  <Translation>
-                      {
-                          t => <>{t(`${experience.job}`)}</>
-                      }
-                  </Translation>
-              </Typography>
-            </Grid>
-          </Grid>
-          <Grid item container justify="space-between">
-                  <Grid item>
-                    <Typography> {experience.company} </Typography>
-                  </Grid>
-                  <Grid item>
-                    <Typography component="em"> 
-                      <LocationOnIcon/> {experience.area}
-                    </Typography> 
-                  </Grid>
-          </Grid>
-        </Grid>
-      </Fragment>
+        <>
+          <h3>{job}</h3>
+          <img src={logo} alt={company} className='photo'/><br/>
+          <h4>{company}</h4> <h4><LocationOnIcon/> {area}</h4>
+          <p className="job-date">{startingDate} - {endingDate}</p>
+          {
+            description ? description.map((duty,index) => {
+              return (
+                  <div className="job-desc" key={index}>
+                    <DoubleArrowIcon className='job-icon' />
+                    <p>{duty}</p>
+                  </div>)
+            }): ''
+          }
+      </>
     );
-  }
 }
 export default SingleExperience;

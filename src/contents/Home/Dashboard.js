@@ -1,22 +1,23 @@
 import React, { Component } from 'react';
 import { Box, Grid, Paper, Typography } from '@material-ui/core';
-import Education from '../Education/Education';
-import Skill from '../Skills/Skill';
-import Experience from '../Experience/Experience';
 import Header from "../Header/Header";
 import '../../App.css';
 import {Translation} from "react-i18next";
-import axios from 'axios';
+import {data} from "../../data";
+import ExperiencesList from "../../components/front/Experiences/ExperiencesList";
+import EducationsList from "../../components/front/Educations/EducationsList";
+import SKillsList from "../../components/front/Skills/SkillsList";
 
 const classes = {
     margin : {
         marginTop: 30
     },
     containerBG: {
-        backgroundColor: '#090A0D',
+        backgroundColor: '#F1F5F8',
     },
     paperBG: {
-        backgroundColor: '#1D1F26',
+        backgroundColor: '#F1F5F8',
+        marginBottom: 30
     },
     textColor: {
         color: 'teal',
@@ -48,7 +49,7 @@ class Dashboard extends Component{
 
     render() {
         return (
-            <div>
+            <>
                 <Header executeScroll={this.executeScroll}/>
                 <Grid container direction="row" justify="center" alignItems="center" style={classes.containerBG}>
                     <Grid item xs={12} sm={12} md={12} lg={10} style={classes.margin} ref={this.educationRef} style={{scrollBehavior: 'smooth'}}>
@@ -59,11 +60,7 @@ class Dashboard extends Component{
                                 }
                             </Translation>
                         </Typography>
-                        <Paper elevation={3} style={classes.paperBG}>
-                            <Box p={6}>
-                                <Education />
-                            </Box>
-                        </Paper>
+                        <EducationsList data={data.educations.educations} />
                     </Grid>
                     <Grid item xs={12} sm={12} md={12} lg={10} style={classes.margin}>
                         <Typography variant="h4" component="h1" style={classes.textColor}>
@@ -75,26 +72,15 @@ class Dashboard extends Component{
                         </Typography>
                         <Paper elevation={3} style={classes.paperBG}>
                             <Box p={10}>
-                                <Skill />
+                                <SKillsList data={data.skills.skills}  />
                             </Box>
                         </Paper>
                     </Grid>
                     <Grid item xs={12} sm={12} md={12} lg={10} style={classes.margin}>
-                        <Typography variant="h4" component="h1" style={classes.textColor}>
-                            <Translation>
-                                {
-                                    t => <> {t('Expérience Professionnelle')} </>
-                                }
-                            </Translation>
-                        </Typography>
-                        <Paper elevation={3} style={classes.paperBG}>
-                            <Box p={10}>
-                                <Experience />
-                            </Box>
-                        </Paper>
+                        <ExperiencesList data={data.experiences.experiences} />
                     </Grid>
                 </Grid>
-            </div>
+            </>
         )
     }
 

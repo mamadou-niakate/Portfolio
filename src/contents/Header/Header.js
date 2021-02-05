@@ -5,20 +5,15 @@ import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 import {Translation} from "react-i18next";
 
 const heading = {
-    backgroundColor: '#070707',
-    height: 800,
+    //background: 'linear-gradient(360deg, #F1F5F8 30%, #1D1F26 100%)', //#182952
+    //backgroundColor: '#F1F5F8',
+    background: 'linear-gradient(360deg, #F1F5F8 0%, #1D1F26 0%)',
+    height: 920,
     color:'white',
     fontWeight: 'bold',
     textAlign: 'center'
 }
 
-const overlay = {
-    backgroundColor: '#313131',//053f5e
-    //background: 'linear-gradient(45deg, #182952 30%, #182952 90%)',
-    height: '100%',
-    width: '100%',
-    opacity: '0.5',
-}
 
 const info = {
     paddingTop: '10%',
@@ -51,7 +46,7 @@ function Header(props) {
   const { classes } = props;
   return (
     <div style={heading}>
-        <Typography component="div" style={overlay}>
+        <Typography component="div">
             <Grid container direction="column" justify="space-around" alignItems="center">
                 <Grid container item direction="row" justify="space-around" alignItems="center" style={info}>
                     <Grid item container direction="column" lg={4} spacing={1}>

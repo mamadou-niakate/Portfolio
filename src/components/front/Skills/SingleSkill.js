@@ -36,7 +36,7 @@ const ProgressBar = (props) => {
     color: 'white',
     fontWeight: 'bold'
   }
-  
+
   return (
     <Fragment>
       <Grid container alignItems="center">
@@ -52,8 +52,6 @@ const ProgressBar = (props) => {
         </Grid>
       </Grid>
     </Fragment>
-
-    
   );
 };
 export default ProgressBar;

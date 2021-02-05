@@ -15,9 +15,9 @@ const useStyles = makeStyles({
         padding: 40,
     },
     container: {
-        background: '#1D1F26',
+        background: '#F1F5F8',
         color: '#8e8f93',
-        marginTop: 40,
+        marginTop: 0,
         marginBottom: 0
     },
     sectionTitle: {
